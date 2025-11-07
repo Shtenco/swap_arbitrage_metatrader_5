@@ -350,7 +350,7 @@ Qualified investor (Kazakhstan & Russia). Algorithmic trading specialist since 2
 
 **Contact:**
 - Email: koshtenco@gmail.com
-- Telegram: +7 (747) 333-50-25
+- Telegram: @Shtenco
 - VK: https://vk.com/altradinger
 
 ---
