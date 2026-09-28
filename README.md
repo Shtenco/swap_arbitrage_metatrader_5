@@ -408,3 +408,35 @@ flowchart LR
 README не должен утверждать больше, чем подтверждают код, тесты и сохранённые артефакты. Для рыночных/экономических проектов backtest или внутренняя переоценка не равны реализованной внешней прибыли; для AI/infra проектов benchmark или диаграмма не равны production-надежности.
 
 <!-- SYNERGY-FEDERATION-PASSPORT:END -->
+
+---
+
+# 💰 Глубокий доказательный паспорт Swap Carry
+
+## Реальность `main`
+
+`swap_arbitrage_trading.py` + README + license. Исторические claims `10–15% annual` и `5–8% additional returns` не имеют отдельного frozen evidence artifact в `main`.
+
+## Что на самом деле исследуется
+
+Это прежде всего **carry-aware portfolio optimization**, а не risk-free arbitrage.
+
+```mermaid
+flowchart LR
+    SWAP[Broker swap schedule] --> RET[Expected carry]
+    PRICE[FX returns] --> COV[Covariance]
+    RET --> OPT[Portfolio optimizer]
+    COV --> OPT
+    OPT --> STRESS[FX/carry/regime stress]
+```
+
+## Основные риски
+
+- broker swap schedules меняются;
+- triple-swap/calendar effects;
+- leverage and margin;
+- funding/currency regime shifts;
+- correlation breakdown;
+- spread/rollover widening.
+
+Следующий рубеж: point-in-time swap archive + broker-specific historical schedule + walk-forward portfolio optimization + stress/margin model + realized carry reconciliation.
